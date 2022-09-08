@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/morris/greeting/{time}",[App\Http\Controllers\GreetingController::class, "greeting"]);
+Route::get("/morris/freedom/{msg}",[App\Http\Controllers\GreetingController::class, "freedom"]);
+Route::get("/morris/random",[App\Http\Controllers\GreetingController::class, "random"]);
+
+
